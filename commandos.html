@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>PIA Sistemas Operativos</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Commandos de UNIX</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <a class="nav" href="/index.html"><li>Home</li></a>
+                <a class="nav" href="quien.html"><li>Acerca De</li></a>
+            </ul>
+        </nav>
+
+        <main class="container">
+            <h2>Commandos de UNIX</h2>
+
+            <p>
+                Unix es conocido por su amplia gama de comandos de 
+                línea de comandos que permiten a los usuarios interactuar con el 
+                sistema operativo y realizar diversas tareas. Aquí hay 
+                una lista de algunos comandos comunes de Unix, 
+                junto con una breve descripción de su función.
+            </p>
+
+            <p>
+                Estos son solo algunos de los muchos comandos disponibles en Unix. 
+                La mayoría de estos comandos tienen opciones y argumentos adicionales que permiten una funcionalidad más 
+                avanzada y personalizada. Además, Unix es altamente personalizable 
+                y los usuarios pueden escribir sus propios scripts y programas 
+                para automatizar tareas o realizar funciones específicas.
+            </p>
+            <ul>
+                <li><b>ls</b></li>
+                <p>Lista los archivos y directorios en el directorio actual</p>
+
+                <li><b>cd</b></li>
+                <p>Cambia el directorio actual</p>
+
+                <li><b>pwd</b></li>
+                <p>Muestra la ruta del directorio actual</p>
+
+                <li><b>mkdir</b></li>
+                <p>Crea un nuevo directorio.</p>
+
+                <li><b>rm</b></li>
+                <p>Elemina archivos o directorios</p>
+
+                <li><b>cp</b></li>
+                <p>Copia archivos y directorios</p>
+
+                <li><b>mv</b></li>
+                <p>Mueve o renombra archivos y directorios</p>
+
+                <li><b>cat</b></li>
+                <p>Muestra el contenido de un archivo</p>
+
+                <li><b>grep</b></li>
+                <p>Busca patrones de expresiones regulares dentro de archivos</p>
+
+                <li><b>chmod</b></li>
+                <p>Cambia los permisos de archivos y directorios</p>
+
+                <li><b>man</b></li>
+                <p>Muestra el manual de usuario de otros comandos</p>
+
+                <li><b>ps</b></li>
+                <p>Muestra los procesos en ejecucion</p>
+
+                <li><b>kill</b></li>
+                <p>Envia un senal a un proceso para terminarlo</p>
+
+                <li><b>ping</b></li>
+                <p>Envia solicitudes de eco al direcionamiento IPV4 o IPV6 especificado</p>
+
+                <li><b>who</b></li>
+                <p>muestra información sobre los usuarios que han iniciado sesión en el sistema</p>
+
+                <li><b>ftp</b></li>
+                <p>Protocolo de transferencia de archivos</p>
+
+            </ul>
+
+            <h2>Casos especiales</h2>
+            <p>
+                La filosofía de Unix, un conjunto de principios de 
+                diseño que enfatiza la simplicidad, la modularidad y el 
+                uso de herramientas pequeñas y enfocadas que hacen una sola 
+                cosa bien. Estos no necesariamente son comandos pero son utilizados
+                para juntar otros comandos facilitando la creacion de comandos compuestos de otro comandos
+            </p>
+            <h3>Redirecciones &gt;</h3>
+            <p>
+                El operador de redirecion "&gt;" en UNIX se utiliza para redirigir 
+                la salida de un comando hacia un archivo en lugar 
+                de que se muestre en la pantalla. En resumen, lo que hace 
+                es tomar la salida estándar de un comando y guardarla en un archivo específico. 
+            </p>
+            <b>Ejemplo: </b>
+            <code>ls > salida.txt</code>
+            <br>
+            <p>
+                <b>¿Qué hace esto?</b>
+                Toma el resultado del comando <b>ls</b> y escriba el resultado
+                al archivo de <b>salida.txt</b>
+            </p>
+
+            <h3>Piping |</h3>
+            <p>
+                El operador "|" (tubo o pipe en inglés) se utiliza en 
+                sistemas UNIX y similares para conectar la salida de un comando con la entrada de otro. 
+                Básicamente, permite pasar el resultado de un comando como entrada al siguiente comando 
+                en una cadena de comandos.
+            </p>
+            <b>Ejemplo: </b>
+            <code>ls | grep archivo.txt</code>
+            <br>
+            <p>
+                <b>¿Qué hace esto?</b>
+                Toma el resultado del comando <b>ls</b> que regresa todos los archivos y directorios en 
+                el directorio actual. Lo que regresa el comando es usado como input para
+                para el comando <b>grep</b> que va buscar el texto de "archivo.txt"
+
+            </p>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 PIA de Sistemas Operativos - All Rights Reserved</p>
+        </footer>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>PIA Sistema Operativos</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<header>
+    <h1>Sistema de Archivos</h1>
+</header>
+
+<nav>
+    <ul>
+        <a class="nav" href="/index.html"><li>Home</li></a>
+        <a class="nav" href="quien.html"><li>Quien somos</li></a>
+    </ul>
+</nav>
+
+<main class="container">
+
+    <h2>
+        Sistema de Archivos
+    </h2>
+
+    <p>
+        En UNIX los archivos están organizados en lo que se conoce como directorios. 
+        Un directorio no es más que un archivo especial, el cual contiene información 
+        que permite localizar en el dispositivo otros archivos. Los directorios pueden contener 
+        a su vez nuevos directorios, los cuales se denominan subdirectorios. 
+        A la estructura resultante de esta organización se la conoce con el nombre de 
+        estructura en árbol invertido.
+    </p>
+    <figure class="figure mx-auto mx-auto d-block text-center">
+        <img src="arbol.png" class="figure-img img-fluid rounded" alt="...">
+    </figure>
+
+    <h3>/</h3>
+    <p>
+        <b>(Raiz)</b>
+        Todos los archivos y directorios dependen de un único directorio denominado directorio raíz o root, el cual se representa por el símbolo /. En el caso de que en el sistema tengamos varios dispositivos físicos de almacenamiento secundario (normalmente discos), todos deben depender del directorio raíz, y el usuario tratará cada uno de los discos como un subdirectorio que depende del directorio raíz (root). Se representa como "/"
+    </p>
+
+    <h3>/bin</h3>
+    <p>
+        <b>(binarios)</b>
+        Este directorio contiene archivos binarios esenciales del sistema, como los comandos del intérprete de comandos (shell) y otros programas fundamentales necesarios durante el arranque del sistema o para la operación básica del sistema, incluso cuando otros sistemas de archivos no están disponibles.
+    </p>
+
+    <h3>/sbin</h3>
+    <p>
+        <b>(binarios de sistema)</b>
+        Similar a /bin, pero contiene programas esenciales del sistema que normalmente solo se utilizan por el superusuario (root) para tareas de administración del sistema, tales como montar sistemas de archivos o configurar la red.
+    </p>
+
+    <h3>/usr/bin</h3>
+    <p>
+        <b>(binarios de usuario)</b>
+        Aquí se almacenan los programas binarios para los usuarios. Estos programas no son esenciales para el sistema operativo en sí, pero son utilizados comúnmente por los usuarios.
+    </p>
+
+    <h3>/home</h3>
+    <p>
+        <b>(directorios de usuario)</b>
+        Este directorio contiene los directorios personales de los usuarios. Cada usuario normalmente tiene un directorio dentro de /home donde puede almacenar sus archivos personales y configuraciones.
+    </p>
+
+    <h3>/tmp</h3>
+    <p>
+        <b>(temporal)</b>
+        Es un directorio utilizado para almacenar archivos temporales. Los programas pueden usar este directorio para almacenar datos temporales que no necesitan ser conservados más allá de una sesión de usuario o una operación específica del sistema.
+    </p>
+
+    <h3>/etc</h3>
+    <p>
+        <b>(configuracion)</b>
+        Contiene archivos de configuración del sistema. Los administradores del sistema pueden modificar estos archivos para ajustar la configuración del sistema operativo y de las aplicaciones.
+    </p>
+
+    <h3>/boot</h3>
+    <p>
+        <b>(arranque)</b>
+        Este directorio contiene archivos necesarios para el proceso de arranque del sistema operativo. Aquí se encuentran los archivos de configuración del cargador de arranque (como GRUB en sistemas Linux), así como los núcleos del sistema operativo (kernel) y otros archivos relacionados con el proceso de inicio del sistema. Por lo general, cuando instalas un nuevo kernel en tu sistema, los archivos relacionados con ese kernel se almacenan en este directorio.
+    </p>
+
+    <h3>/lib</h3>
+    <p>
+        <b>(bibliotecas)</b>
+        El directorio /lib (y posiblemente /lib64 en sistemas de 64 bits) contiene las bibliotecas compartidas (librerías) esenciales para el funcionamiento del sistema y de los programas instalados. Estas bibliotecas son utilizadas por los programas en tiempo de ejecución para realizar varias operaciones y funciones. Las bibliotecas compartidas ayudan a evitar la duplicación de código y a conservar espacio en disco al permitir que múltiples programas utilicen las mismas funciones de biblioteca.
+    </p>
+
+    <h3>/mnt</h3>
+    <p>
+        <b>(montaje)</b>
+        El directorio /mnt es utilizado como un punto de montaje temporal para sistemas de archivos adicionales. Cuando deseas acceder a un sistema de archivos que no está montado en el árbol de directorios existente, puedes montarlo en el directorio /mnt. Por ejemplo, si deseas acceder a los archivos de una unidad USB o de una partición de disco, primero puedes montar esa unidad en /mnt y luego acceder a ella desde allí. Después de usar los archivos, puedes desmontar la unidad y el directorio /mnt estará disponible nuevamente para futuros montajes temporales.
+    </p>
+</main>
+
+
+<footer>
+    <p>
+        &copy; 2024 PIA de Sistema Operativos - All Rights Reserved
+    </p>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

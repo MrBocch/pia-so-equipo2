@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>PIA Sistemas Operativos</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Arquitectura de UNIX</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <a class="nav" href="/index.html"><li>Home</li></a>
+                <a class="nav" href="quien.html"><li>Acerca De</li></a>
+            </ul>
+        </nav>
+
+        <main class="container">
+            <h2>Arquitectura de UNIX</h2>
+            <p>
+                La arquitectura de UNIX es un conjunto de principios 
+                y conceptos de diseño que definen la estructura y el 
+                funcionamiento del sistema operativo UNIX. Estos principios 
+                han evolucionado a lo largo del tiempo a medida que UNIX y 
+                sus variantes se han desarrollado y adaptado a diferentes entornos 
+                y necesidades. 
+            </p>
+            <p>
+                UNIX esta conformado por estas capas
+            </p>
+            <figure class="figure mx-auto mx-auto d-block text-center">
+                <img src="unix_arq.jpg" class="mx-auto d-block figure-img img-fluid rounded" alt="...">
+                <figcaption class="figure-caption">Modelo de UNIX</figcaption>
+            </figure>
+
+            <b>Hardware</b>
+            <p>Hardware no forma parte del sistema operativo, pero el sistema operativo communica con el hardware</p>
+
+            <b>Kernel</b>
+            <p>
+                Esta es la capa más poderosa de la arquitectura Unix. 
+                El kernel es responsable de actuar como una interfaz entre el 
+                usuario y el hardware para la utilización efectiva del hardware. El kernel maneja el hardware de 
+                manera efectiva mediante el uso de los controladores de dispositivo. El kernel también es responsable de la gestión de 
+                procesos. Por lo tanto, las 2 características principales del kernel son la gestión de procesos y 
+                la gestión de archivos.
+            </p>
+            <ul>
+                <li>Gestion de Procesos</li>
+                <p>
+                    Los procesos que se ejecutan dentro del sistema operativo requieren 
+                    mucha gestión en cuanto a la memoria que se les asigna, la asignación de 
+                    recursos al proceso, la sincronización de procesos, etc. 
+                    Todo esto lo hace el Kernel en el sistema operativo UNIX. 
+                    Esto se hace utilizando varias técnicas del sistema operativo como paginación, encuadre, memoria virtual, intercambio, cambio de contexto.
+                </p>
+
+                <li>Sistema de Archivos</li>
+                <p>
+                    La gestión de archivos implica la gestión de los datos almacenados en 
+                    los archivos. Esto también incluye la transmisión de los datos almacenados en estos archivos 
+                    a los procesos a medida que lo soliciten.
+                </p> 
+            </ul>
+
+            <b>Shell</b>
+            <p>
+                Dado que el kernel es un programa tan importante del sistema operativo Unix, su acceso directo a 
+                los usuarios puede ser peligroso. Por lo tanto, el Shell entra en escena. Shell es un programa intérprete que interpreta 
+                los comandos introducidos por el usuario y luego envía las solicitudes al kernel 
+                para ejecutar esos comandos. Cuando se completa la ejecución del proceso, el shell 
+                vuelve a enviar una solicitud al kernel para mostrar el programa/información en la 
+                pantalla al usuario. Por lo tanto, el Kernel es una interfaz entre el usuario y el hardware y el Shell es una 
+                interfaz entre el usuario y el Kernel. El shell se puede usar para abrir un archivo, escribir en los archivos, ejecutar programas, etc.
+            </p>
+
+            <b>Applicaciones</b>
+            <p>
+                Esta es la capa más alta del sistema operativo y es donde se ejecutan las aplicaciones y 
+                los programas. Esta capa también se conoce como espacio de usuarios y es donde los usuarios interactúan 
+                con el sistema operativo.
+            </p>
+            <p>
+                Pueden incluir programas de procesamiento de texto, hojas de cálculo, 
+                navegadores web, clientes de correo electrónico, editores de código, y una amplia 
+                gama de otras herramientas y utilidades.
+            </p>
+
+            <h2>Multiusuario</h2>
+            <p>
+                Unix es un sistema operativo multiusuario, lo que significa que puede admitir 
+                simultáneamente múltiples usuarios que interactúan con el sistema y ejecutan sus propios programas 
+                de forma independiente. Este enfoque multiusuario es una de las características fundamentales 
+                que ha distinguido a Unix desde sus primeras versiones.
+            </p> 
+
+            <figure class="figure mx-auto mx-auto d-block text-center">
+                <img src="multiusuario.png" class="mx-auto d-block figure-img img-fluid rounded" alt="...">
+            </figure>
+
+
+            <p>
+                <b>Acceso Concurrente.</b>
+                UNIX permite que varios usuarios accedan al sistema simultáneamente, ya sea localmente a través de terminales conectadas directamente a la computadora o de forma remota a través de la red.
+            </p>
+
+            <p>
+                <b>Espacios de trabajo independientes.</b>
+                Cada usuario tiene su propio espacio de trabajo en el sistema, con su propio directorio de inicio y sus propios archivos y configuraciones. Esto garantiza que las acciones de un usuario no interfieran con las de otros usuarios.
+            </p> 
+
+            <p>
+                <b>Identificación de usuarios</b>
+                UNIX utiliza un sistema de autenticación de usuarios para verificar la identidad de quienes acceden al sistema. Esto se logra mediante nombres de usuario y contraseñas únicas para cada cuenta de usuario.</p>
+            </p>
+
+            <p>
+                <b>Protección de recursos compartidos</b>
+                UNIX implementa mecanismos para proteger los recursos compartidos del sistema, como archivos y dispositivos, de accesos concurrentes conflictivos. Esto se logra mediante bloqueos y otros métodos de sincronización.
+            </p>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 PIA de Sistema Operativos - All Rights Reserved</p>
+        </footer>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
